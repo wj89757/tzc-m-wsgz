@@ -1,0 +1,27 @@
+.deploy_ctype_tip{z-index:1001;width:100%;text-align:center;position:fixed;top:50%;margin-top:-23px;left:0;}.deploy_ctype_tip p{display:inline-block;padding:13px 24px;border:solid #d6d482 1px;background:#f5f4c5;font-size:16px;color:#8f772f;line-height:18px;border-radius:3px;}
+	  .shangchuang
+{ margin:center;
+	background-color:#B5B4B4;
+	text-align:center;
+	color:#FFF;
+	height:50px;
+	line-height:50px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+.shangchuang1 {
+    background-color: #B5B4B4;
+    color: #FFF;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.tupian
+{
+	padding-top:-15px;
+	margin-top:-25px;
+}
+.tx {  height: 16px; width: 30px; border-color: black black #000000; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px; font-size: 9pt; background-color: #eeeeee; color: #0000FF}
+.bt {  font-size: 9pt; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; height: 16px; width: 80px; background-color: #eeeeee; cursor: hand}
+.tx1 { height: 30px; width: 150px; font-size: 9pt; border: 1px solid; border-color: black black #000000; color: #0000FF}

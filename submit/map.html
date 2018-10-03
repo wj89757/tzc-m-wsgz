@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+		body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=haBz31hiMKdXbAxs8fRdWs1G"></script>
+	<title></title>
+</head>
+<style>
+#box{
+	position:absolute;
+	z-index:10;
+	top:30%;
+	left:20%;
+	border:1px solid #0F6;
+	background:#3CF;	
+	height:200px;
+	width:300px;
+	filter:alpha(opacity=80); /*IE滤镜，透明度50%*/
+	-moz-opacity:0.8; /*Firefox私有，透明度50%*/
+	opacity:0.8;/*其他，透明度50%*/
+	display:none;
+}
+#box p#site{
+	margin:50px 0 20px 60px;
+	color:#333;
+	font-family:"微软雅黑";
+}
+.input1{
+	width:140px;
+	height:30px;
+	margin:10px 0 0 30px;
+	}
+.input2{width:80px;}
+</style>
+
+<body onload="function()">
+	<div id="allmap"> </div>
+    <div id="box">
+    <form action="index.php" method="post">
+    	<p id="site"></p>
+        <input class="input1" type="text" id="xy" value="" name="location"/>
+        <input class="input2" type="submit" name="" />
+    </form>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+	// 百度地图API功能
+	var oDiv=document.getElementById('box');
+	var pIn=document.getElementById('site');
+	var map = new BMap.Map("allmap");            
+	map.centerAndZoom("临海",12);           
+	//单击获取点击的经纬度
+	map.addEventListener("click",function(e){
+		/*alert(e.point.lng + "," + e.point.lat);*/
+		var x=e.point.lng + "," + e.point.lat;
+		pIn.innerHTML=x;
+		oDiv.style.display="block";
+		document.getElementById("xy").value = x;
+	});
+	
+
+
+</script>
